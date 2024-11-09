@@ -1,0 +1,39 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+instance/
+*.sqlite3
+*.db
+
+# Environment variables and virtual environments
+.env
+.venv/
+venv/
+env/
+*.env.*
+
+# Flask-related files
+*.log
+*.pid
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node modules (if using any JS tools)
+node_modules/
+
+# Static files that may be generated
+*.css.map
+*.js.map
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
