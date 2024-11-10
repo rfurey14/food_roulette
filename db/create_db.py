@@ -1,7 +1,7 @@
 import sqlite3
 
 # Connect to SQLite database (it will create a new file if it doesn't exist)
-conn = sqlite3.connect('db/food_dishes.db')
+conn = sqlite3.connect('food_dishes.db')
 cursor = conn.cursor() #creates a cursor 
 
 # Create the tables and insert data
@@ -56,23 +56,33 @@ INSERT INTO dishes (name, country, description) VALUES (?, ?, ?)
 cursor.executemany('''
 INSERT INTO ingredients (name) VALUES (?)
 ''', [
-    ('Rice'), ('Shrimp'), ('Tofu'), ('Peanuts'), ('Tortilla'), ('Fish'), ('Seaweed'),
+    ('Rice',), 
+    ('Shrimp',), 
+    ('Tofu',),
+    ('Peanuts',),
+    ('Tortilla',), 
+    ('Fish',), 
+    ('Seaweed',),
 ])
 
 # Insert data into allergens
 cursor.executemany('''
 INSERT INTO allergens (name) VALUES (?)
 ''', [
-    ('Shellfish'), ('Peanuts'), ('Soy'), ('Gluten'), ('Fish')
+    ('Shellfish',), ('Peanuts',), ('Soy',), ('Gluten',), ('Fish',)
 ])
 
 # Relate dishes and ingredients
 cursor.executemany('''
 INSERT INTO dish_ingredients (dish_id, ingredient_id) VALUES (?, ?)
 ''', [
-    (1, 2), (1, 3), (1, 4),  # Pad Thai ingredients
-    (2, 5),                  # Tacos ingredients
-    (3, 1), (3, 6), (3, 7),  # Sushi ingredients
+    (1, 2), 
+    (1, 3),
+    (1, 4),  # Pad Thai ingredients
+    (2, 5),  # Tacos ingredients
+    (3, 1), #sushi ingredients
+    (3, 6), 
+    (3, 7), 
 ])
 
 # Relate ingredients to allergens
