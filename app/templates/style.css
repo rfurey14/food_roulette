@@ -1,0 +1,120 @@
+body{
+    background-color: rgb(255, 250, 223);
+}
+
+
+.main-heading-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.heading-frontpage{
+    font-family: "Kadwa", sans-serif;
+    font-size: 55px;
+    margin: 0px;
+    line-height: 1;
+    text-align: center;
+}
+
+.text-frontpage{
+    font-family: "Kadwa", sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+.start-btn{
+    font-family: "Kadwa", sans-serif;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 30px;
+    padding: 5px 35px;
+    background-color: rgb(67, 112, 124);
+    color: white;
+}
+
+.start-btn:hover{
+    cursor: pointer;
+}
+
+
+.slider{
+    padding-top: 50px;
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+}
+
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) *var(--quantity));
+    position: relative;
+}
+
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc( ( 10s / var(--quantity)) * (var(--position) - 1) );
+}
+
+.slider .list .item img{
+    width: 100%;
+}
+
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }
+    to{
+        left: calc(var(--width) * -1);
+    }
+}
+
+/* Basic styling for the page */
+
+/* Basic styling for the page */
+
+/* Basic styling for the page */
+
+/* Basic styling for the page */
+
+/* Basic styling for the page */
+
+/* Spinner container */
+.spinner-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Centered country name styling */
+.spinner-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Spin button styling */
+.spin-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.spin-button:hover {
+    background-color: #45a049;
+}
+
